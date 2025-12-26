@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { useLanguage } from "./useLanguage";
 import { translations } from "./translations";
+import PrivacyPolicy from "./PrivacyPolicy";
 
-function App() {
+function Home() {
   const { t, language, setLanguage } = useLanguage();
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
@@ -125,9 +127,21 @@ function App() {
         </div>
         <footer className="footer">
           <p className="copyright">{t.copyright}</p>
+          <Link to="/privacy-policy" className="privacy-link">Privacy Policy</Link>
         </footer>
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+    </Router>
   );
 }
 
