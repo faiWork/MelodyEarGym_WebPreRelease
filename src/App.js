@@ -127,7 +127,7 @@ function Home() {
         </div>
         <footer className="footer">
           <p className="copyright">{t.copyright}</p>
-          <Link to="/privacy-policy" className="privacy-link">Privacy Policy</Link>
+          <Link to="/privacy-policy" className="privacy-link">{t.privacyTitle}</Link>
         </footer>
       </div>
     </div>

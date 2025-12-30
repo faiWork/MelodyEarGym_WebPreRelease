@@ -19,6 +19,29 @@ export const translations = {
     emailAddress: "melody.eargym.official@gmail.com",
     contactUs: "Contact Us",
     copyright: "Copyright © 2025 Melody Ear Gym. All rights reserved.",
+    privacyBackToHome: "← Back to Home",
+    privacyTitle: "Privacy Policy",
+    privacyLastUpdated: "Last updated:",
+    privacySection1Title: "1. Information We Collect",
+    privacySection1Content:
+      "Melody Ear Gym does not collect, store, or transmit any personal information. The app operates entirely on your device. We do not access your contacts, photos, location, or any other personal data stored on your device.",
+    privacySection2Title: "2. Data Usage",
+    privacySection2Content:
+      "We do not track user behavior, collect analytics, or use any third-party tracking services. Your usage data, progress, and any settings remain private and local to your device only.",
+    privacySection3Title: "3. Third-Party Services",
+    privacySection3Content:
+      "Melody Ear Gym does not integrate with any third-party analytics, advertising, or data collection services. The app functions independently without sending any data to external servers.",
+    privacySection4Title: "4. Children's Privacy",
+    privacySection4Content:
+      "Our app does not knowingly collect any information from children under the age of 13. Since we do not collect any data, there is no risk of collecting children's information.",
+    privacySection5Title: "5. Contact Information",
+    privacySection5Content: "If you have any questions about this Privacy Policy, please contact us at:",
+    privacySection6Title: "6. Changes to This Policy",
+    privacySection6Content:
+      "We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.",
+    privacySection7Title: "7. Your Consent",
+    privacySection7Content:
+      "By using Melody Ear Gym, you consent to this Privacy Policy. If you do not agree with this policy, please do not use our app.",
   },
   "zh-TW": {
     name: "繁體中文",
@@ -39,6 +62,29 @@ export const translations = {
     emailAddress: "melody.eargym.official@gmail.com",
     contactUs: "聯絡我們",
     copyright: "版權所有 © 2025 旋律聽力健身房。保留所有權利。",
+    privacyBackToHome: "← 返回首頁",
+    privacyTitle: "隱私權政策",
+    privacyLastUpdated: "最後更新：",
+    privacySection1Title: "1. 我們收集的資訊",
+    privacySection1Content:
+      "旋律聽力健身房不會收集、儲存或傳輸任何個人資訊。應用程式完全在您的裝置上運作。我們不會存取您的聯絡人、照片、位置或儲存在您裝置上的任何其他個人資料。",
+    privacySection2Title: "2. 資料使用",
+    privacySection2Content:
+      "我們不會追蹤使用者行為、收集分析資料或使用任何第三方追蹤服務。您的使用資料、進度和任何設定都保持私密，僅限於您的裝置。",
+    privacySection3Title: "3. 第三方服務",
+    privacySection3Content:
+      "旋律聽力健身房不會整合任何第三方分析、廣告或資料收集服務。應用程式獨立運作，不會將任何資料傳送到外部伺服器。",
+    privacySection4Title: "4. 兒童隱私",
+    privacySection4Content:
+      "我們的應用程式不會故意收集 13 歲以下兒童的任何資訊。由於我們不收集任何資料，因此沒有收集兒童資訊的風險。",
+    privacySection5Title: "5. 聯絡資訊",
+    privacySection5Content: "如果您對此隱私權政策有任何疑問，請透過以下方式聯絡我們：",
+    privacySection6Title: "6. 政策變更",
+    privacySection6Content:
+      "我們可能會不時更新我們的隱私權政策。任何變更都會在此頁面上發布，並附上更新的修訂日期。我們鼓勵您定期檢閱此隱私權政策，以了解我們如何保護您的資訊。",
+    privacySection7Title: "7. 您的同意",
+    privacySection7Content:
+      "使用旋律聽力健身房即表示您同意此隱私權政策。如果您不同意此政策，請勿使用我們的應用程式。",
   },
   "zh-CN": {
     name: "简体中文",
@@ -59,5 +105,28 @@ export const translations = {
     emailAddress: "melody.eargym.official@gmail.com",
     contactUs: "联系我们",
     copyright: "版权所有 © 2025 旋律听力健身房。保留所有权利。",
+    privacyBackToHome: "← 返回首页",
+    privacyTitle: "隐私政策",
+    privacyLastUpdated: "最后更新：",
+    privacySection1Title: "1. 我们收集的信息",
+    privacySection1Content:
+      "旋律听力健身房不会收集、储存或传输任何个人信息。应用程序完全在您的设备上运作。我们不会访问您的联系人、照片、位置或储存在您设备上的任何其他个人数据。",
+    privacySection2Title: "2. 数据使用",
+    privacySection2Content:
+      "我们不会追踪用户行为、收集分析数据或使用任何第三方追踪服务。您的使用数据、进度和任何设置都保持私密，仅限于您的设备。",
+    privacySection3Title: "3. 第三方服务",
+    privacySection3Content:
+      "旋律听力健身房不会整合任何第三方分析、广告或数据收集服务。应用程序独立运作，不会将任何数据传送到外部服务器。",
+    privacySection4Title: "4. 儿童隐私",
+    privacySection4Content:
+      "我们的应用程序不会故意收集 13 岁以下儿童的任何信息。由于我们不收集任何数据，因此没有收集儿童信息的风险。",
+    privacySection5Title: "5. 联系信息",
+    privacySection5Content: "如果您对此隐私政策有任何疑问，请通过以下方式联系我们：",
+    privacySection6Title: "6. 政策变更",
+    privacySection6Content:
+      "我们可能会不时更新我们的隐私政策。任何变更都会在此页面上发布，并附上更新的修订日期。我们鼓励您定期审查此隐私政策，以了解我们如何保护您的信息。",
+    privacySection7Title: "7. 您的同意",
+    privacySection7Content:
+      "使用旋律听力健身房即表示您同意此隐私政策。如果您不同意此政策，请不要使用我们的应用程序。",
   },
 };
