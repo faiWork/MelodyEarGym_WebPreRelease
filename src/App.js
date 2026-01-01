@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useSearchParams } from "react-router-dom";
 import "./App.css";
 import { useLanguage } from "./useLanguage";
 import { translations } from "./translations";
@@ -8,6 +8,16 @@ import PrivacyPolicy from "./PrivacyPolicy";
 function Home() {
   const { t, language, setLanguage } = useLanguage();
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const handleLanguageChange = (langKey) => {
+    setLanguage(langKey);
+    setShowLanguageMenu(false);
+    // Update URL to reflect language change
+    searchParams.set("lang", langKey);
+    navigate(`/?${searchParams.toString()}`, { replace: true });
+  };
 
   return (
     <div className="App">
@@ -40,10 +50,7 @@ function Home() {
                 key={langKey}
                 className={`language-option ${language === langKey ? "active" : ""
                   }`}
-                onClick={() => {
-                  setLanguage(langKey);
-                  setShowLanguageMenu(false);
-                }}
+                onClick={() => handleLanguageChange(langKey)}
               >
                 {translations[langKey].name}
               </button>
@@ -127,7 +134,7 @@ function Home() {
         </div>
         <footer className="footer">
           <p className="copyright">{t.copyright}</p>
-          <Link to="/privacy-policy" className="privacy-link">{t.privacyTitle}</Link>
+          <Link to={`/privacy-policy?lang=${language}`} className="privacy-link">{t.privacyTitle}</Link>
         </footer>
       </div>
     </div>

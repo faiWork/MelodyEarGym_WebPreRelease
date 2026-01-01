@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useLanguage } from "./useLanguage";
 import { translations } from "./translations";
 import "./PrivacyPolicy.css";
@@ -7,6 +7,16 @@ import "./PrivacyPolicy.css";
 function PrivacyPolicy() {
     const { t, language, setLanguage } = useLanguage();
     const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+
+    const handleLanguageChange = (langKey) => {
+        setLanguage(langKey);
+        setShowLanguageMenu(false);
+        // Update URL to reflect language change
+        searchParams.set("lang", langKey);
+        navigate(`/privacy-policy?${searchParams.toString()}`, { replace: true });
+    };
 
     return (
         <div className="privacy-policy-page">
@@ -39,10 +49,7 @@ function PrivacyPolicy() {
                                 key={langKey}
                                 className={`language-option ${language === langKey ? "active" : ""
                                     }`}
-                                onClick={() => {
-                                    setLanguage(langKey);
-                                    setShowLanguageMenu(false);
-                                }}
+                                onClick={() => handleLanguageChange(langKey)}
                             >
                                 {translations[langKey].name}
                             </button>
@@ -51,7 +58,7 @@ function PrivacyPolicy() {
                 )}
             </div>
             <div className="privacy-container">
-                <Link to="/" className="back-link">{t.privacyBackToHome}</Link>
+                <Link to={`/?lang=${language}`} className="back-link">{t.privacyBackToHome}</Link>
 
                 <h1>{t.privacyTitle}</h1>
                 <p className="last-updated">{t.privacyLastUpdated} {new Date().toLocaleDateString()}</p>
